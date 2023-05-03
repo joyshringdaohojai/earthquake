@@ -19,24 +19,10 @@ def predict():
 
     input_query = np.array([[Latitude, Longitude, Depth]])
     input_data = np.array(input_query, dtype=float)
-    a = model.predict(input_data)[0]
-
-    if (a < 4):
-        result = "No"
-    elif (4 <= a < 6):
-        result = "Low"
-    elif (6 <= a < 8):
-        result = "Moderate"
-    elif (8 <= a < 9):
-        result = "High"
-    elif (a >= 9):
-        result = "VeryHigh"
-    else:
-        result = "Undefined"
+    result = model.predict(input_data)
 
     return jsonify({'earthquake': str(result)})
 
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
-
