@@ -21,7 +21,7 @@ def predict():
     input_data = np.array(input_query, dtype=float)
     a = model.predict(input_data)[0]
     
-        if (a < 4):
+    if (a < 4):
         result = "No"
     elif (4 <= a < 6):
         result = "Low"
