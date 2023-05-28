@@ -24,13 +24,13 @@ def predict():
     if (a < 4):
         result = "No Earthquake"
     elif (4 <= a < 6):
-        result = "Low"
+        result = "Minor"
     elif (6 <= a < 8):
         result = "Moderate"
     elif (8 <= a < 9):
-        result = "High"
+        result = "Strong"
     elif (a >= 9):
-        result = "VeryHigh"
+        result = "Major"
     else:
         result = "Undefined"
     return jsonify({'earthquake': str(result)})
