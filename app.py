@@ -22,7 +22,7 @@ def predict():
     a = model.predict(input_data)[0]
     
     if (a < 4):
-        result = "No"
+        result = "No Earthquake"
     elif (4 <= a < 6):
         result = "Low"
     elif (6 <= a < 8):
