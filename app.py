@@ -22,15 +22,15 @@ def predict():
     a = model.predict(input_data)[0]
     
     if (a < 4):
-        result = "No Earthquake"
+        result = "No Future Earthquake Detected"
     elif (4 <= a < 6):
-        result = "Minor"
+        result = "Minor Earthquake Detected"
     elif (6 <= a < 8):
-        result = "Moderate"
+        result = "Earthquake detected of Moderate magnitude"
     elif (8 <= a < 9):
-        result = "Strong"
+        result = "Earthquake detected of Strong magnitude"
     elif (a >= 9):
-        result = "Major"
+        result = "Earthquake detected of very strong Magnitude "
     else:
         result = "Undefined"
     return jsonify({'earthquake': str(result)})
